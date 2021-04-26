@@ -29,7 +29,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity 
 @Table(name="users")
-public class User implements Serializable{
+public class User{
 
 	/**
 	 * 
@@ -38,7 +38,7 @@ public class User implements Serializable{
 	 * advantage of serialization is used to save and persist state of an object 
 	 * the other advantage is to travel an object across the network  
 	 */
-	private static final long serialVersionUID = 1671417246199538663L;
+	//private static final long serialVersionUID = 1671417246199538663L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO, generator="native")

@@ -20,21 +20,16 @@ public class DirectorateService {
 	    	return directorateRepository.findAll();
 	    }
 
-	    
-		public void save(Directorate directorate) {
-		
+	    public void save(Directorate directorate) {
 			directorateRepository.save(directorate);
 			
 		}
 
 		public Optional<Directorate> findById(String id) {
-			// return specific directorate id
 			return directorateRepository.findById(id);
 		}
 
 		public void delete(String id) {
-			// delete directorate by id
-		directorateRepository.deleteById(id);
-			
+			directorateRepository.deleteById(id);
 		}
 }
