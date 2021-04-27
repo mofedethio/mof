@@ -22,8 +22,8 @@
                   <tr>
                     
                     <th><i class="icon_table"></i>Directorate</th>
-                    <th><i class="icon_table"></i>Telephone</th>
                     <th><i class="icon_table"></i>Email</th>
+                    <th><i class="icon_table"></i>Telephone</th>
                     <th><i class="icon_cogs"></i>Actions</th>
                   </tr>
                 </thead>
@@ -31,8 +31,8 @@
                   <c:forEach items="${directorates}" var="dir">
 						<tr>
 							<td>${dir.dir_name}</td>
-							<td>${dir.phone_num}</td>
 							<td>${dir.email}</td>
+							<td>${dir.phone_num}</td>
 							
 							<td><a type="button" class="btn btn-success" id="editButton"
 								href="/directorates/findById?id=${dir.dir_name}">Update</a>
