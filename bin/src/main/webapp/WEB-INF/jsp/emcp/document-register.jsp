@@ -29,15 +29,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <c:forEach items="${documents}" var="dirdoc">
+                  <c:forEach items="${document}" var="dirdoc">
 						<tr>
 						    <td>${dirdoc.id}</td>
 							<td>${dirdoc.directorname}</td>
 							<td>${dirdoc.reportype}</td>
 								<td><a type="button" class="btn btn-success" id="editButton"
-								href="/documents/findById?id=${dirdoc.id}">Update</a>
+								href="/document/findById?id=${dirdoc.id}">Update</a>
 							<a type="button" class="btn btn-warning" id="deleteButton"
-								href="/documents/delete?id=${dirdoc.id}">Delete</a></td>
+								href="/document/delete?id=${dirdoc.id}">Delete</a></td>
 								  
 						</tr>
 					</c:forEach>
@@ -56,7 +56,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/documents/addNew" method="post" enctype  ="multipart/form-data">
+        <form action="/document/addNew" method="post" enctype  ="multipart/form-data">
              
              
              <div class="form-group">
@@ -97,13 +97,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Update Documents</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Update document</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form action="/documents/update" method="put"> 
+        <form action="/document/update" method="put"> 
             
           
            <div class="form-group">
@@ -135,7 +135,7 @@
        
       
       <div class="modal-footer">
-        FDRE MOFEC EMCP System
+        MOF Financial Tracking System
         </div>
          </form>
                  

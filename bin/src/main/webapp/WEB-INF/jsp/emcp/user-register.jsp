@@ -30,7 +30,7 @@
                    <th><i class="icon_table"></i>#</th>
                     <th><i class="icon_table"></i>First Name:</th>
                     <th><i class="icon_table"></i>Last Name:</th>
-                     <th><i class="icon_table"></i>Username</th>
+                     <th><i class="icon_table"></i>User name</th>
                      <th><i class="icon_table"></i> Email</th>
                       <th><i class="icon_table"></i> Organization Code</th>
                      
@@ -104,19 +104,11 @@
           </div>
           </spring:bind>
           
-          <spring:bind path="email">
-           <div class="form-group row ">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Email:</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="emailedit" name="email"  >
-          
-            </div>
-          </div>
-             </spring:bind>      
+               
              
              <spring:bind path="username">      
           <div class="form-group row ">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Username:</label>
+            <label for="recipient-name" class="col-sm-4 col-form-label">User name:</label>
             <div class="col-sm-6">
             <input type="text" class="form-control" id="usernameedit" name="username"  required>
              <form:errors path="username"></form:errors>
@@ -163,7 +155,21 @@
 		  </div> 
 		  
           
-          
+           <div class="form-group row">
+		    <label for="directorate" class="col-sm-4 col-form-label">Directorate: </label>
+		    <div class ="col-sm-6">
+			    <select class="form-control" id="orgid" name="user_dir_name"  >
+			       <option>--SELECT--</option>
+			     	 <c:forEach items="${directorate}" var="dir">
+				      <option value="${dir.dir.user_dir_name}">${dir.user_dir_name}
+				   </option>
+				   </c:forEach>
+				   
+			    </select>
+			    <form:errors path="organization"></form:errors>	
+			    </div>		    
+		  </div> 
+		  
           <!-- the following id="roles" and name ="roles" is very important to add user_id and role_id in to db -->
 
 		<div class="form-group row">
