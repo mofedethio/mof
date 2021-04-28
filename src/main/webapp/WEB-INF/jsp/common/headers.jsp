@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <!-- replace charset=ISO-8859-1 with " UTF-8 "  for all character just like Amharic char-->
+    
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 

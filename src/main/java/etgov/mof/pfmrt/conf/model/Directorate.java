@@ -27,8 +27,7 @@ public class Directorate {
 	private String  email;
 	
 	@OneToMany(mappedBy="directorate")
-	private List<Document> documents;
-
+	private List<Document> document;
 	public String getDir_name() {
 		return dir_name;
 	}
@@ -54,11 +53,11 @@ public class Directorate {
 	}
 
 	public List<Document> getDocuments() {
-		return documents;
+		return document;
 	}
 
-	public void setDocuments(List<Document> documents) {
-		this.documents = documents;
+	public void setDocuments(List<Document> document) {
+		this.document = document;
 	}
 
 	

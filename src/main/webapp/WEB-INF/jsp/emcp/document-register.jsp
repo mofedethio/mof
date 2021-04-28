@@ -135,7 +135,7 @@
        
       
       <div class="modal-footer">
-        FDRE MOFEC EMCP System
+        FDRE Ministry of Finance Financial Tracking  System
         </div>
          </form>
                  
