@@ -6,7 +6,7 @@ public class PasswordEncoderTest {
  
     public static void main(String[] args) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String encodedPassword = passwordEncoder.encode("audit");
+        String encodedPassword = passwordEncoder.encode("A12345");
          
         System.out.println(encodedPassword);
  

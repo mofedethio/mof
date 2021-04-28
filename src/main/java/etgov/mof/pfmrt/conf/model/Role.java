@@ -15,12 +15,12 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Role implements Serializable{
+public class Role {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6353963609310956029L;
+	//private static final long serialVersionUID = 6353963609310956029L;
 
 	
 	@Id

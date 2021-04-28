@@ -20,8 +20,7 @@ import lombok.NoArgsConstructor;
 public class Directorate {
 	
 	 @Id
-	 private String dir_name;
-	
+	private String dir_name;
 	
 	private String phone_num;
 	private String  email;
