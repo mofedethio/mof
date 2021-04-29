@@ -5,14 +5,14 @@ $('document').ready(function(){
 			
 		var href = $(this).attr('href');
 			$.get(href, function(trainee, status){
-			$('#idEdit').val(trainee.id);
-			$('#idstartdate').val(trainee.startdate);
-			$('#idenddate').val(trainee.enddate);
-			$('#nameEdit').val(trainee.firstname);
-			$('#lastnameEdit').val(trainee.lastname);
-			$('#traineecourseEdit').val(trainee.traineecourseid);
-			$('#traineeorgEdit').val(trainee.traineeorgid);
-			$('#idexamscore').val(trainee.examscore);
+			$('#idEdit').val(trainee.train_id);
+			$('#idstartdate').val(trainee.train_start_date);
+			
+			$('#nameEdit').val(trainee.first_name);
+			$('#lastnameEdit').val(trainee.middle_name);
+			$('#traineecourseEdit').val(trainee.course_id);
+			$('#traineeorgEdit').val(trainee.org_id);
+			
 			});					
 		$('#editModal').modal();
 	});
