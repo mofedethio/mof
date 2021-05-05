@@ -21,7 +21,7 @@ public class Organization {
 	private String email;
 	private String telephone;
 	private boolean status;
-	private String organizationhead;
+	
 	
 	public String getOrg_id() {
 		return org_id;
@@ -52,12 +52,6 @@ public class Organization {
 	}
 	public void setStatus(boolean status) {
 		this.status = status;
-	}
-	public String getOrganizationhead() {
-		return organizationhead;
-	}
-	public void setOrganizationhead(String organizationhead) {
-		this.organizationhead = organizationhead;
 	}
 	
 	
