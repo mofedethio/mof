@@ -21,7 +21,6 @@
                   
                     <th><i class="icon_table"></i>Organization Code</th>
                     <th><i class="icon_table"></i>Organization</th>
-                    <th><i class="icon_table"></i>Financial Head</th>
                     <th><i class="icon_table"></i>Email</th>
                     <th><i class="icon_table"></i>Telephone</th>
                     <th><i class="icon_cogs"></i>Actions</th>
@@ -30,16 +29,15 @@
                 <tbody>
                   <c:forEach items="${organizations}" var="org">
 						<tr>
-						     <td>${org.id}</td>
-							<td>${org.orgname}</td>
-							<td>${org.organizationhead}</td>
+						     <td>${org.org_id}</td>
+							<td>${org.org_name}</td>
 							<td>${org.email}</td>
 							<td>${org.telephone}</td>
 							
 							<td><a type="button" class="btn btn-success" id="editButton"
-								href="/organizations/findById?id=${org.id}">Update</a>
+								href="/organizations/findById?id=${org.org_id}">Update</a>
 							<a type="button" class="btn btn-warning" id="deleteButton"
-								href="/organizations/delete?id=${org.id}">Delete</a></td>
+								href="/organizations/delete?id=${org.org_id}">Delete</a></td>
 							
 								  
 						</tr>
@@ -63,20 +61,15 @@
         
         <div class="form-group">
             <label for="recipient-name" class="col-form-label">OrganizationID:</label>
-            <input type="text" class="form-control" id="recipient-name" name="id"  required>
+            <input type="text" class="form-control" id="recipient-name" name="org_id"  required>
           </div>
                        
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Organization:</label>
-            <input type="text" class="form-control" id="recipient-name" name="orgname"  required>
+            <input type="text" class="form-control" id="recipient-name" name="org_name"  required>
           </div>
           
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Organization Head:</label>
-            <input type="text" class="form-control" id="recipient-name" name="organizationhead"  required>
-          </div>
-        
-          <div class="form-group">
+           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Email:</label>
             <input type="email" class="form-control" id="recipient-name" name="email"    required>
           </div>
@@ -114,20 +107,15 @@
             
           <div class="form-group">
             <label for="recipient-id" class="col-form-label">ID:</label>
-            <input type="text" class="form-control" id="idEdit" name="id" readonly>
+            <input type="text" class="form-control" id="idEdit" name="org_id" readonly>
           </div>
         
                     
           <div class="form-group">
-            <label for="recipient-email" class="col-form-label">Organization:</label>
-            <input type="text" class="form-control" id="orgEdit" name="orgname">
+            <label for="recipient-name" class="col-form-label">Organization:</label>
+            <input type="text" class="form-control" id="orgEdit" name="org_name">
           </div>
-        
-        <div class="form-group">
-            <label for="recipient-email" class="col-form-label">Organization Head:</label>
-            <input type="text" class="form-control" id="orgheadEdit" name="organizationhead">
-          </div>
-          
+                
           <div class="form-group">
             <label for="recipient-email" class="col-form-label">Email:</label>
             <input type="text" class="form-control" id="emailEdit" name="email">
@@ -137,12 +125,6 @@
             <label for="recipient-telephone" class="col-form-label">telephone:</label>
             <input type="text" class="form-control" id="telephoneEdit" name="telephone">
           </div>
-          
-          <!--  
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>     
-        </div>             
-       -->
       
       <div class="modal-footer">
        <button type="submit" class="btn btn-primary">Submit</button> 

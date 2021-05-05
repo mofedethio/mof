@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import etgov.mof.pfmrt.conf.model.Organization;
 import etgov.mof.pfmrt.conf.service.OrganizationService;
 
+
 @Controller 
 public class OrganizationController {
 	@Autowired
@@ -34,7 +35,11 @@ public class OrganizationController {
 	
 	@PostMapping("/organizations/addNew")
 	public String addNew( Organization organization) {
+		if (organizationservice.findById(organization.getOrg_id()).isEmpty()) {
 		organizationservice.save(organization);
+		} else {
+		return "alreadyExists";	
+		}
 		return "redirect:/organizations";
 	}
 	

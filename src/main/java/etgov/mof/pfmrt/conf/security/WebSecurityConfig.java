@@ -31,7 +31,7 @@ public class WebSecurityConfig  extends  WebSecurityConfigurerAdapter{
         .antMatchers("/login").access("hasRole('AUDIT')")
         .antMatchers("/login").access("hasRole('USER')")
         
-        .antMatchers("/organizations").access("hasRole('ADMIN')")
+        .antMatchers("/emcp/organization-register").access("hasRole('ADMIN')")
         .antMatchers("/userlist").access("hasRole('ADMIN')")
         .antMatchers("/signup").access("hasRole('ADMIN')")
         .antMatchers("/audittransactionlists").access("hasRole('AUDIT')")
