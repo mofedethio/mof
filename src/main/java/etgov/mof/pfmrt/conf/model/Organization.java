@@ -20,7 +20,7 @@ public class Organization {
 	private String org_name;
 	private String email;
 	private String telephone;
-	private boolean status;
+	private boolean status = true;
 	
 	public String getOrg_id() {
 		return org_id;
@@ -52,6 +52,5 @@ public class Organization {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	
 	
 }

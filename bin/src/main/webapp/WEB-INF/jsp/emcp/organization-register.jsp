@@ -21,7 +21,6 @@
                   
                     <th><i class="icon_table"></i>Organization Code</th>
                     <th><i class="icon_table"></i>Organization</th>
-                    <th><i class="icon_table"></i>Financial Head</th>
                     <th><i class="icon_table"></i>Email</th>
                     <th><i class="icon_table"></i>Telephone</th>
                     <th><i class="icon_cogs"></i>Actions</th>
@@ -32,7 +31,6 @@
 						<tr>
 						     <td>${org.id}</td>
 							<td>${org.orgname}</td>
-							<td>${org.organizationhead}</td>
 							<td>${org.email}</td>
 							<td>${org.telephone}</td>
 							
@@ -70,12 +68,7 @@
             <label for="recipient-name" class="col-form-label">Organization:</label>
             <input type="text" class="form-control" id="recipient-name" name="orgname"  required>
           </div>
-          
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Organization Head:</label>
-            <input type="text" class="form-control" id="recipient-name" name="organizationhead"  required>
-          </div>
-        
+ 
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Email:</label>
             <input type="email" class="form-control" id="recipient-name" name="email"    required>
@@ -123,12 +116,7 @@
             <input type="text" class="form-control" id="orgEdit" name="orgname">
           </div>
         
-        <div class="form-group">
-            <label for="recipient-email" class="col-form-label">Organization Head:</label>
-            <input type="text" class="form-control" id="orgheadEdit" name="organizationhead">
-          </div>
-          
-          <div class="form-group">
+           <div class="form-group">
             <label for="recipient-email" class="col-form-label">Email:</label>
             <input type="text" class="form-control" id="emailEdit" name="email">
           </div>
