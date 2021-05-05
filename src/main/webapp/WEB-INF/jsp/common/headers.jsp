@@ -96,6 +96,7 @@
 								data-target="dropdown_target"> Transaction </a>
 								<div Class="dropdown-menu" aria-labelledby="dropdown_target">
 									<a Class="dropdown-item" href="mastertransactionlists">Reports </a> 
+									<a Class="dropdown-item" href="mastertransactionlists">Organization Reports </a> 
 										<a Class="dropdown-item" href="#">Record Penalty </a>
 
 									<div Class="dropdown-divider"></div>
