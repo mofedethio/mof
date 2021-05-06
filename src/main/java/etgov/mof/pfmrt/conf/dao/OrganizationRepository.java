@@ -10,5 +10,5 @@ import etgov.mof.pfmrt.conf.model.Organization;
 
 @Repository
 public interface OrganizationRepository extends JpaRepository<Organization, String> {
-	public List<Map<String, Object>> report();
+	
 }

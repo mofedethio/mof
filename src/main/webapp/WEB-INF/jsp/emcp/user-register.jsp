@@ -33,6 +33,7 @@
                      <th><i class="icon_table"></i>Username</th>
                      
                       <th><i class="icon_table"></i> Organization Code</th>
+                      <th><i class="icon_table"></i> Status</th>
                      
                      <th><i class="icon_cogs"></i>Actions</th>
                   </tr>
@@ -45,6 +46,7 @@
 						    <td>${user.lastName}</td>
 							<td>${user.username}</td>
 							<td>${user.org_id}</td>
+							<td>${user.status}</td>
 							
 			
 							  <td>
@@ -190,7 +192,7 @@
     
         -->
 
-
+          
 
 
 
@@ -259,7 +261,7 @@
           <div class="form-group row ">
             <label for="recipient-name" class="col-sm-4 col-form-label">Username:</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="userNameEdit" name="username"  required>
+            <input type="text" class="form-control" id="userNameEdit" name="username"  >
              <form:errors path="username"></form:errors>
             </div>
           </div>
@@ -318,6 +320,7 @@
                   <form:errors path="roles"></form:errors>
 				</div>
 			</div>
+	 		
 	 						
 
 

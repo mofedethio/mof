@@ -81,6 +81,7 @@ public class UserServiceImpl implements UserService{
 		to.setFirstName(from.getFirstName());
 		to.setLastName(from.getLastName());
 		to.setRoles(from.getRoles());
+		to.setStatus(from.isStatus());
 	}
 
 	@Override

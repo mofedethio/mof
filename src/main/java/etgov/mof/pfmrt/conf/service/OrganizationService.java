@@ -1,9 +1,6 @@
 package etgov.mof.pfmrt.conf.service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +19,7 @@ public class OrganizationService {
 	//Return list of organizations
 	public List<Organization> getOrganizations(){
 		return organizationRepository.findAll();
-		
 	}
-	
-		
-	
 	
 	//SAve new organization
 	public void save(Organization organization) {

@@ -282,7 +282,7 @@
 					
 					<li><a href="login">Logout</a></li>
 					<li><a href="profile">Profile</a></li>
-					<li><a href="change-password">Change Password</a></li>
+					<li><a href="changePassword">Change Password</a></li>
 					<li><a href="index">Dynamic Chart</a></li>
 				</ul>
 

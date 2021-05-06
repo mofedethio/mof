@@ -6,6 +6,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
+<div class="container">
+<div class="col-md-6">
 
 <form action="/editUser/changePassword" method="post">
 <div class="container">
@@ -61,6 +63,9 @@
 </div>
 </div>
 </form>
+</div>
+
+</div>
 
 <script type="text/javascript">
 function submitChangePassword(){

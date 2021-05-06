@@ -58,6 +58,7 @@ public class User implements Serializable{
 	
 	@Transient
 	private String confirmPassword;
+	private boolean status;
 	
 	@Size(min=6)
 	@ManyToMany(fetch = FetchType.LAZY)
@@ -190,6 +191,16 @@ public class User implements Serializable{
 
 	public void setOrg_id(String org_id) {
 		this.org_id = org_id;
+	}
+
+	
+	
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 
 	

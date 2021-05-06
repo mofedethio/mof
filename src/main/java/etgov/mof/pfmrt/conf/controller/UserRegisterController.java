@@ -3,7 +3,6 @@ package etgov.mof.pfmrt.conf.controller;
 import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.validation.Valid;
@@ -207,7 +206,12 @@ public class UserRegisterController {
 		}
 		return ResponseEntity.ok("Success");
 	}
-
+	
+@GetMapping("/changePassword")
+public String changePassword() {
+	
+	return "changepassword";
+}
 	
 	    //user profile handler
 		@GetMapping("/profile")
