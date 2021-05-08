@@ -69,11 +69,7 @@
             <input type="text" class="form-control" id="recipient-name" name="orgname"  required>
           </div>
         
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Email:</label>
-            <input type="email" class="form-control" id="recipient-name" name="email"    required>
-          </div>
-        
+          
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Telephone:</label>
             <input type="text" class="form-control" id="recipient-name" name="telephone">

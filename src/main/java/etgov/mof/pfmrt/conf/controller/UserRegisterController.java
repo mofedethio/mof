@@ -26,9 +26,11 @@ import etgov.mof.pfmrt.conf.dao.RoleRepository;
 import etgov.mof.pfmrt.conf.exception.CustomeFieldValidationException;
 import etgov.mof.pfmrt.conf.exception.UsernameOrIdNotFound;
 import etgov.mof.pfmrt.conf.util.ChangePasswordForm;
+import etgov.mof.pfmrt.conf.model.Directorate;
 import etgov.mof.pfmrt.conf.model.Organization;
 import etgov.mof.pfmrt.conf.model.Role;
 import etgov.mof.pfmrt.conf.model.User;
+import etgov.mof.pfmrt.conf.service.DirectorateService;
 import etgov.mof.pfmrt.conf.service.OrganizationService;
 import etgov.mof.pfmrt.conf.service.UserService;
 import etgov.mof.pfmrt.conf.validation.UserValidator;
@@ -48,7 +50,8 @@ public class UserRegisterController {
 	
 	@Autowired
 	private OrganizationService orgservice;
-	
+	@Autowired
+	private DirectorateService dirservice;
 	 @Autowired
 	private UserValidator userValidator;
 	
@@ -94,9 +97,12 @@ public class UserRegisterController {
 		model.addAttribute("userForm", user);
 		model.addAttribute("userList", userService.getAllUsers());
 		model.addAttribute("roles",roleRepository.findAll());
-		
+		//to display list of organization
 		List<Organization> orglist = orgservice.getOrganizations();
 		model.addAttribute("organizations",orglist);
+		//to display list of directorate
+		List<Directorate> dirList=dirservice.GetAllDirectorates();
+		model.addAttribute("directorate",dirList);
 		
 		return "emcp/user-register";
 	}
@@ -190,7 +196,7 @@ public class UserRegisterController {
         return "redirect:/userlist";
     }
 	
-	@PostMapping("/editUser/changePassword")
+	@PostMapping("/user/update/changePassword")
 	public ResponseEntity postEditUseChangePassword(@Valid @RequestBody ChangePasswordForm form, Errors errors) {
 		try {
 			if( errors.hasErrors()) {

@@ -155,6 +155,22 @@
 		  </div> 
 		  
           
+           <div class="form-group row">
+		    <label for="trainee" class="col-sm-4 col-form-label">Directorate: </label>
+		    <div class ="col-sm-6">
+			    <select class="form-control" id="orgid" name="user_dir_name"  >
+			       <option>--SELECT--</option>
+			     	 <c:forEach items="${directorate}" var="director">
+				      <option value="${director.dir_name}">${director.dir_name}
+				   </option>
+				   </c:forEach>
+				   
+			    </select>
+			    <form:errors path="organization"></form:errors>	
+			    </div>		    
+		  </div> 
+		  
+          
           
           <!-- the following id="roles" and name ="roles" is very important to add user_id and role_id in to db -->
 
@@ -194,7 +210,17 @@
 
           
 
-
+    <spring:bind path="confirmPassword">
+           <div class="form-group row ">
+            <label for="recipient-name" class="col-sm-4 col-form-label">Status:</label>
+            <div class ="col-sm-6">
+            <input type="number" class="form-control" id="statusEdit" name="status" >
+           <form:errors path="status"></form:errors>
+            
+            </div>
+          </div>
+          
+          </spring:bind>
 
 									<div class="modal-footer">
          <div class="form-group row" class="col-sm-4 col-form-label">
@@ -303,7 +329,21 @@
 			    </div>		    
 		  </div> 
 		  
-          
+           <div class="form-group row">
+		    <label for="trainee" class="col-sm-4 col-form-label">Directorate: </label>
+		    <div class ="col-sm-6">
+			    <select class="form-control" id="orgid" name="user_dir_name"  >
+			       <option>--SELECT--</option>
+			     	 <c:forEach items="${directorate}" var="director">
+				      <option value="${director.dir_name}">${director.dir_name}
+				   </option>
+				   </c:forEach>
+				   
+			    </select>
+			    <form:errors path="organization"></form:errors>	
+			    </div>		    
+		  </div> 
+		  
           
           <!-- the following id="roles" and name ="roles" is very important to add user_id and role_id in to db -->
 
@@ -321,7 +361,20 @@
 				</div>
 			</div>
 	 		
-	 						
+	  	
+          
+          
+           <spring:bind path="confirmPassword">
+           <div class="form-group row ">
+            <label for="recipient-name" class="col-sm-4 col-form-label">Status:</label>
+            <div class ="col-sm-6">
+            <input type="number" class="form-control" id="statusEdit" name="status" >
+           <form:errors path="status"></form:errors>
+            
+            </div>
+          </div>
+          
+          </spring:bind>					
 
 
 									<div class="modal-footer">

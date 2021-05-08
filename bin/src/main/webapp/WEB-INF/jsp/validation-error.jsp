@@ -38,15 +38,7 @@
           </div>
           </spring:bind>
           
-          <spring:bind path="email">
-           <div class="form-group row ${status.error ? 'has-error' : ''}">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Email:</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="recipient-name" name="email"  >
-          
-            </div>
-          </div>
-             </spring:bind>      
+               
              
              <spring:bind path="username">      
           <div class="form-group row ${status.error ? 'has-error' : ''}">

@@ -12,6 +12,7 @@
 <form action="/editUser/changePassword" method="post">
 <div class="container">
 <h3 class="mb-3">Change Password</h3>
+
 <div class="col-md-6">
 
 
@@ -78,7 +79,7 @@ function submitChangePassword(){
 	$.ajax({
         type: "POST",
         contentType: "application/json",
-        url: "/editUser/changePassword",
+        url: "/user/update/changePassword",
         data: JSON.stringify(params),
         dataType: 'text',
         cache: false,
