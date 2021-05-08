@@ -27,12 +27,15 @@ public class Trainee {
 
 	@Id
 private String train_id;
+	
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 private Date train_start_date;
+	
 private String middle_name;
 private String first_name;
 
 	@ManyToOne
-	@JoinColumn(name="trainee_cours_eid",insertable=false,updatable=false)
+	@JoinColumn(name="trainee_course_id",insertable=false,updatable=false)
 	private Course course;
 	private String trainee_course_id;
 	
@@ -71,12 +74,8 @@ private String first_name;
 	public void setCourse(Course course) {
 		this.course = course;
 	}
-	public String getTraineecourseid() {
-		return trainee_course_id;
-	}
-	public void setTraineecourseid(String traineecourseid) {
-		this.trainee_course_id = trainee_course_id;
-	}
+	
+	
 	public Organization getOrganization() {
 		return organization;
 	}
@@ -88,6 +87,12 @@ private String first_name;
 	}
 	public void setTrainee_org_id(String trainee_org_id) {
 		this.trainee_org_id = trainee_org_id;
+	}
+	public String getTrainee_course_id() {
+		return trainee_course_id;
+	}
+	public void setTrainee_course_id(String trainee_course_id) {
+		this.trainee_course_id = trainee_course_id;
 	}
 	
 	

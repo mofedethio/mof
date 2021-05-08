@@ -34,8 +34,6 @@ import lombok.NoArgsConstructor;
 	 private Long transaction_id;
 	 	    
 	    private String upload_doc;
-		//private String doctype;
-		private String status;
 		//private Date submission_date;  replaced by auditable createdDate
 		// private Date verifydate;
 		// private String verify by     // replaced by auditable 
@@ -43,7 +41,58 @@ import lombok.NoArgsConstructor;
 		@Column(length=50)
 		private String remarks;
 		
+		private String status;
+		
+		
 	
+		public Long getTransaction_id() {
+			return transaction_id;
+		}
+
+		public void setTransaction_id(Long transaction_id) {
+			this.transaction_id = transaction_id;
+		}
+
+		public String getUpload_doc() {
+			return upload_doc;
+		}
+
+		public void setUpload_doc(String upload_doc) {
+			this.upload_doc = upload_doc;
+		}
+
+		public String getStatus() {
+			return status;
+		}
+
+		public void setStatus(String status) {
+			this.status = status;
+		}
+
+		public Organization getOrganiza() {
+			return organiza;
+		}
+
+		public void setOrganiza(Organization organiza) {
+			this.organiza = organiza;
+		}
+
+		public Document getTransactiondocument() {
+			return transactiondocument;
+		}
+
+		public void setTransactiondocument(Document transactiondocument) {
+			this.transactiondocument = transactiondocument;
+		}
+
+		public User getUser2() {
+			return user2;
+		}
+
+		public void setUser2(User user2) {
+			this.user2 = user2;
+		}
+
 		public String getRemarks() {
 			return remarks;
 		}
@@ -82,16 +131,22 @@ import lombok.NoArgsConstructor;
 		@ManyToOne
 		@JoinColumn(name="trans_doc_id",insertable=false,updatable=false)
 		private Document transactiondocument;
-		private  String transc_doc_id;
+		private  String trans_doc_id;
 		
 
-		public Document getTransactiondocument() {
-			return transactiondocument;
+		
+		public String getTransc_doc_id() {
+			return trans_doc_id;
 		}
 
-		public void setTransactiondocument(Document transactiondocument) {
-			this.transactiondocument = transactiondocument;
+		public void setTransc_doc_id(String transc_doc_id) {
+			this.trans_doc_id = transc_doc_id;
 		}
+
+		@JsonIgnore
+		@ManyToOne
+		@JoinColumn(name="assigned_expert_user_id", insertable= false ,updatable =false)
+		private User user2;
 
   }
 

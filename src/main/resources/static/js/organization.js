@@ -5,13 +5,11 @@ $('document').ready(function(){
 			
 		var href = $(this).attr('href');
 			$.get(href, function(org, status){
-			$('#idEdit').val(org.id);
-			
-			$('#orgEdit').val(org.orgname);
-			$('#orgheadEdit').val(org.organizationhead);
-			
+			$('#idEdit').val(org.org_id);
+			$('#orgEdit').val(org.org_name);
 			$('#emailEdit').val(org.email);
 			$('#telephoneEdit').val(org.telephone);
+			$('#statusEdit').val(org.status);
 			});					
 		$('#editModal').modal();
 	});

@@ -33,9 +33,6 @@
 <img src ="img/mofed.png"  height= "95" width = "110" alt="mofed logo" />
 </div>
 
-
-
-
 <div Class="col-md-2">
 
   <a class="navbar-brand" href="#">EMCP  System </a>
@@ -45,8 +42,7 @@
   </div>
   </div>
   
-  
-  
+    
   <div Class="container">
   <div Class="col-md-5">
   <div Class="collapse navbar-collapse" id="collapse_target">
@@ -78,17 +74,7 @@
 								</div></li>
 
 
-							<li class="nav-item dropdown "><a
-								class="nav-link dropdown-toggle" data-toggle="dropdown"
-								data-target="dropdown_target"> User </a>
-								<div Class="dropdown-menu" aria-labelledby="dropdown_target">
-									<a Class="dropdown-item" href="userlist"> User</a> 
-									 
-									<div Class="dropdown-divider"></div>
-									<a Class="dropdown-item" href="roles">Role</a> <a
-										Class="dropdown-item" href="userprivilleges">Privilege</a>
-								</div></li>
-
+							
 
 
 							<li class="nav-item dropdown "><a
@@ -100,6 +86,24 @@
 
 									<div Class="dropdown-divider"></div>
 
+								</div></li>
+								
+								
+								<li class="nav-item dropdown "><a
+								class="nav-link dropdown-toggle" data-toggle="dropdown"
+								data-target="dropdown_target"> Report </a>
+								<div Class="dropdown-menu" aria-labelledby="dropdown_target">
+									<a Class="dropdown-item" href="organizationreport"> organization Report</a> 
+									<div Class="dropdown-divider"></div>
+									<a Class="dropdown-item" href="documentreport"> document Report</a>
+									<div Class="dropdown-divider"></div> 
+									<a Class="dropdown-item" href="penaltyreport"> penalty Report</a> 
+									<div Class="dropdown-divider"></div>
+									<a Class="dropdown-item" href="coursereport"> Course Report</a> 
+									<div Class="dropdown-divider"></div>
+									<a Class="dropdown-item" href="traineereport"> Trainee Report</a> 
+									<div Class="dropdown-divider"></div>
+									 <a Class="dropdown-item" href="directoratereport">  directorate Report</a>
 								</div></li>
                            </sec:authorize>
 
@@ -228,6 +232,32 @@
 									<div Class="dropdown-divider"></div>
 								</div></li>
 						</sec:authorize>
+
+
+                        <sec:authorize access="hasRole('SYSADMIN')">
+
+						
+							<li class="nav-item dropdown "><a
+								class="nav-link dropdown-toggle" data-toggle="dropdown"
+								data-target="dropdown_target"> User </a>
+								<div Class="dropdown-menu" aria-labelledby="dropdown_target">
+									<a Class="dropdown-item" href="userlist"> User</a> 
+									 
+									<div Class="dropdown-divider"></div>
+									 
+								</div></li>
+
+						
+						
+						</sec:authorize>
+
+
+
+
+
+
+
+
 
 
 

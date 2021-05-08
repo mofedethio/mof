@@ -5,11 +5,9 @@ $('document').ready(function(){
 			
 		var href = $(this).attr('href');
 			$.get(href, function(dir, status){
-			$('#idEdit').val(dir.id);
-			
-			$('#idEdit').val(dir.directoratename);
+						$('#idEdit').val(dir.dir_name);
 			$('#emailEdit').val(dir.email);
-			$('#telephoneEdit').val(dir.telephone);
+			$('#telephoneEdit').val(dir.phone_num);
 			});					
 		$('#editModal').modal();
 	});

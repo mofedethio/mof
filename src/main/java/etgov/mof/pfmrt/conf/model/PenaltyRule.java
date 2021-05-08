@@ -19,6 +19,14 @@ public class PenaltyRule {
 	
 	
 	
+	public String getPen_rule_doc_id() {
+		return pen_rule_doc_id;
+	}
+
+	public void setPen_rule_doc_id(String pen_rule_doc_id) {
+		this.pen_rule_doc_id = pen_rule_doc_id;
+	}
+
 	private Integer penalty_no_days;
 	
 	private String penality_type;
@@ -86,6 +94,4 @@ public class PenaltyRule {
 	}
 	
 	
-	
-
 }

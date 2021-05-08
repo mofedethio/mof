@@ -23,7 +23,8 @@
                     
                     <th><i class="icon_table"></i>Document ID</th>
                     <th><i class="icon_table"></i>Directorate</th>
-                    <th><i class="icon_table"></i>Report Type</th>
+                    <th><i class="icon_table"></i>Doc Type</th>
+                    <th><i class="icon_table"></i>Deadline</th>
                     
                     <th><i class="icon_cogs"></i>Actions</th>
                   </tr>
@@ -31,13 +32,14 @@
                 <tbody>
                   <c:forEach items="${documents}" var="dirdoc">
 						<tr>
-						    <td>${dirdoc.id}</td>
-							<td>${dirdoc.directorname}</td>
-							<td>${dirdoc.reportype}</td>
+						    <td>${dirdoc.doc_id}</td>
+						    <td>${dirdoc.dir_name}</td>
+						    <td>${dirdoc.doc_type}</td>
+							<td>${dirdoc.sub_deadline}</td>
 								<td><a type="button" class="btn btn-success" id="editButton"
-								href="/documents/findById?id=${dirdoc.id}">Update</a>
+								href="/documents/findById?id=${dirdoc.doc_id}">Update</a>
 							<a type="button" class="btn btn-warning" id="deleteButton"
-								href="/documents/delete?id=${dirdoc.id}">Delete</a></td>
+								href="/documents/delete?id=${dirdoc.doc_id}">Delete</a></td>
 								  
 						</tr>
 					</c:forEach>
@@ -61,11 +63,11 @@
              
              <div class="form-group">
 		    <label for="ddlCountryDetails" class="col-form-label">Directorate: </label>
-			    <select class="form-control" id="ddlDocumentAdd" name="directorname" required>
+			    <select class="form-control" id="ddlDocumentAdd" name="director_name" required>
 			       <option>-SELECT-</option>
 			          
 			       <c:forEach items="${directorates}" var="dir">
-				      <option value="${dir.directoratename}">${dir.directoratename}
+				      <option value="${dir.dir_name}">${dir.dir_name}
 				   </option>
 				   </c:forEach>
 			    </select>	
@@ -74,13 +76,18 @@
 		  
 		  <div class="form-group">
             <label for="recipient-name" class="col-form-label">Document ID:</label>
-            <input type="text" class="form-control" id="recipient-name" name="id"  required>
+            <input type="text" class="form-control" id="recipient-name" name="doc_id"  required>
           </div>        
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Report Type:</label>
-            <input type="text" class="form-control" id="recipient-name" name="reportype"  required>
+            <label for="recipient-name" class="col-form-label">Doc Type:</label>
+            <input type="text" class="form-control" id="recipient-name" name="doc_type"  required>
           </div>
         
+        
+        <div class="form-group">
+            <label for="recipient-name" class="col-form-label">submission deadline:</label>
+            <input type="text" class="form-control" id="recipient-name" name="sub_deadline"  required>
+          </div>
           <div class="form-group">
           <button type="submit" class="btn btn-primary">Save</button>  
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>      
@@ -108,16 +115,16 @@
           
            <div class="form-group">
             <label for="recipient-name" class="col-form-label">Document ID:</label>
-            <input type="text" class="form-control" id="idedit" name="id"   readonly >
+            <input type="text" class="form-control" id="idedit" name="doc_id"   readonly >
           </div>
         
         <div class="form-group">
 		    <label for="ddlCountryDetails" class="col-form-label">Directorate: </label>
-			    <select class="form-control" id="diredit" name="directorname" required>
+			    <select class="form-control" id="diredit" name="director_name" required>
 			       <option>-SELECT-</option>
 			          
 			       <c:forEach items="${directorates}" var="dir">
-				      <option value="${dir.directoratename}">${dir.directoratename}
+				      <option value="${dir.dir_name}">${dir.dir_name}
 				   </option>
 				   </c:forEach>
 			    </select>	
@@ -125,7 +132,12 @@
 		  </div>  
           <div class="form-group">
             <label for="recipient-email" class="col-form-label">Report Type:</label>
-            <input type="text" class="form-control" id="typeEdit" name="reportype">
+            <input type="text" class="form-control" id="docTypeEdit" name="doc_type">
+          </div>
+          
+           <div class="form-group">
+            <label for="recipient-email" class="col-form-label">Deadline:</label>
+            <input type="text" class="form-control" id="deadlineEdit" name="sub_deadline">
           </div>
         
           <div class="form-group">
@@ -134,9 +146,7 @@
         </div>             
        
       
-      <div class="modal-footer">
-        FDRE MOFEC EMCP System
-        </div>
+      
          </form>
                  
       </div>

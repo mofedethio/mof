@@ -25,14 +25,10 @@ public class WebSecurityConfig  extends  WebSecurityConfigurerAdapter{
         .authorizeRequests()
         .antMatchers(resources).permitAll()  
         .antMatchers("/login").permitAll() 
-        
-        
-        .antMatchers("/login").access("hasRole('ADMIN')")
-        .antMatchers("/login").access("hasRole('AUDIT')")
-        .antMatchers("/login").access("hasRole('USER')")
-        
+     
+         
         .antMatchers("/organizations").access("hasRole('ADMIN')")
-        .antMatchers("/userlist").access("hasRole('ADMIN')")
+        .antMatchers("/userlist").access("hasRole('SYSADMIN')")
         .antMatchers("/signup").access("hasRole('ADMIN')")
         .antMatchers("/audittransactionlists").access("hasRole('AUDIT')")
         .antMatchers("/budgettransactionlists").access("hasRole('BUDGET')")

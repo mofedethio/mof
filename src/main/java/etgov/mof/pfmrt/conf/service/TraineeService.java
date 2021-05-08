@@ -23,12 +23,12 @@ public class TraineeService {
 		   traineeRepository.save(trainee);
 		   }
 	   
-	   public Optional<Trainee> findById(String train_id){
-		   return traineeRepository.findById(train_id);
+	   public Optional<Trainee> findById(String id){
+		   return traineeRepository.findById(id);
 	       }
 	   
-	   public void delete (String train_id) {
-		   traineeRepository.deleteById(train_id);
+	   public void delete (String id) {
+		   traineeRepository.deleteById(id);
 	   }
 	   
 	   

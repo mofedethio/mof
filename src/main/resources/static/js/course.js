@@ -5,8 +5,8 @@ $('document').ready(function(){
 			
 		var href = $(this).attr('href');
 			$.get(href, function(course, status){
-			$('#idEdit').val(course.id);
-			$('#nameEdit').val(course.coursename);
+			$('#idEdit').val(course.course_id);
+			$('#nameEdit').val(course.course_name);
 			$('#hrEdit').val(course.hour);
 			
 			});					

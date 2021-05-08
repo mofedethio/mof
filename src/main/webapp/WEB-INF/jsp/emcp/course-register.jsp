@@ -20,6 +20,7 @@
                 <thead class="thead-dark">
                   <tr>
                     
+                    <th><i class="icon_table"></i>Course ID</th>
                     <th><i class="icon_table"></i>Course Name</th>
                     <th><i class="icon_table"></i>Hours</th>
                     <th><i class="icon_cogs"></i>Actions</th>
@@ -28,13 +29,14 @@
                 <tbody>
                   <c:forEach items="${courses}" var="course">
 						<tr>
-							<td>${course.coursename}</td>
+						    <td>${course.course_id}</td>
+							<td>${course.course_name}</td>
 							<td>${course.hour}</td>
 							
 							<td><a type="button" class="btn btn-success" id="editButton"
-								href="/courses/findById?id=${course.id}">Update</a>
+								href="/courses/findById?course_id=${course.course_id}">Update</a>
 							<a type="button" class="btn btn-warning" id="deleteButton"
-								href="/courses/delete?id=${course.id}">Delete</a></td>
+								href="/courses/delete?course_id=${course.course_id}">Delete</a></td>
 							
 								  
 						</tr>
@@ -55,10 +57,16 @@
       </div>
       <div class="modal-body">
         <form action="/courses/addNew" method="post">
-                       
+          
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Course ID:</label>
+            <input type="text" class="form-control" id="recipient-name" name="course_id"  required>
+          </div> 
+         
+                      
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Course Name:</label>
-            <input type="text" class="form-control" id="recipient-name" name="coursename"  required>
+            <input type="text" class="form-control" id="recipient-name" name="course_name"  required>
           </div>
         
           <div class="form-group">
@@ -91,14 +99,14 @@
         <form action="/courses/update" method="put"> 
             
           <div class="form-group">
-            <label for="recipient-id" class="col-form-label">ID:</label>
-            <input type="text" class="form-control" id="idEdit" name="id" readonly>
+            <label for="recipient-id" class="col-form-label">Course ID:</label>
+            <input type="text" class="form-control" id="idEdit" name="course_id" readonly>
           </div>
         
                     
           <div class="form-group">
             <label for="recipient-email" class="col-form-label">Course Name:</label>
-            <input type="text" class="form-control" id="nameEdit" name="coursename">
+            <input type="text" class="form-control" id="nameEdit" name="course_name">
           </div>
         
           <div class="form-group">

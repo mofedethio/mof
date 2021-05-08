@@ -5,9 +5,10 @@ $('document').ready(function(){
 		
 		var href = $(this).attr('href');
 			$.get(href, function(dirdoc, status){
-			$('#idedit').val(dirdoc.id);
-			$('#diredit').val(dirdoc.directorname);
-			$('#typeEdit').val(dirdoc.reportype);
+			$('#idedit').val(dirdoc.doc_id);
+			$('#docTypeEdit').val(dirdoc.doc_type);
+			$('#diredit').val(dirdoc.director_name);
+			$('#deadlineEdit').val(dirdoc.sub_deadline);
 						});					
 		$('#editModal').modal();
 	});
