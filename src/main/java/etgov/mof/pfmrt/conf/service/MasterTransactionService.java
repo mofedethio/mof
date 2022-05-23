@@ -43,7 +43,11 @@ public class MasterTransactionService {
 		return masterTransactionRepository.findById(id).get();
 	}
 	
-	
+
+	public List<MasterTransaction> getOrgTrans(Long orgid) {
+		return masterTransactionRepository.findTransactionByOrg(orgid);
+		
+	}
 
 }
 

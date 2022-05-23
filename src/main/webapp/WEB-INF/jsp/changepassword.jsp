@@ -6,10 +6,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
+<div class="container">
+<div class="col-md-6">
 
 <form action="/editUser/changePassword" method="post">
 <div class="container">
 <h3 class="mb-3">Change Password</h3>
+
 <div class="col-md-6">
 
 
@@ -61,6 +64,9 @@
 </div>
 </div>
 </form>
+</div>
+
+</div>
 
 <script type="text/javascript">
 function submitChangePassword(){
@@ -73,7 +79,7 @@ function submitChangePassword(){
 	$.ajax({
         type: "POST",
         contentType: "application/json",
-        url: "/editUser/changePassword",
+        url: "/user/update/changePassword",
         data: JSON.stringify(params),
         dataType: 'text',
         cache: false,

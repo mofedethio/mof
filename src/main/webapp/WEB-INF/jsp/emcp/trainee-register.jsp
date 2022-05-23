@@ -20,11 +20,12 @@
                 <thead class="thead-dark">
                   <tr>
                     
+                    <th><i class="icon_table"></i>Id</th>
                     <th><i class="icon_table"></i>First Name</th>
-                    <th><i class="icon_table"></i>Last Name</th>
-                    <th><i class="icon_table"></i>CourseID</th>
-                    <th><i class="icon_table"></i>OrganizationID</th>
-                    <th><i class="icon_table"></i>Exam Score</th>
+                     <th><i class="icon_table"></i>Middle Name</th>
+                    <th><i class="icon_table"></i>Train Start Date</th>
+                    <th><i class="icon_table"></i>Course Id</th>
+                    <th><i class="icon_table"></i>Train Course Id</th>
                     <th><i class="icon_cogs"></i>Actions</th>
                   </tr>
                 </thead>
@@ -32,18 +33,19 @@
                   <c:forEach items="${trainees}" var="trainee">
                  
 						<tr>
-						    
-							<td>${trainee.firstname}</td>
-							<td>${trainee.lastname}</td>
-							<td>${trainee.traineecourseid}</td>
-							<td>${trainee.traineeorgid}</td>
-							<td>${trainee.examscore}</td>
+						    <td>${trainee.train_id}</td>
+							<td>${trainee.first_name}</td>
+							<td>${trainee.middle_name}</td>
+							<td>${trainee.train_start_date}</td>
+							<td>${trainee.course_id}</td>
+							<td>${trainee.org_id}</td>
+							
 							
 							
 							<td><a type="button" class="btn btn-success" id="editButton"
-								href="/trainees/findById?id=${trainee.id}">Update</a>
+								href="/trainees/findById?id=${trainee.train_id}">Update</a>
 							<a type="button" class="btn btn-warning" id="deleteButton"
-								href="/trainees/delete?id=${trainee.id}">Delete</a></td>
+								href="/trainees/delete?id=${trainee.train_id}">Delete</a></td>
 							
 								  
 						</tr>
@@ -73,30 +75,30 @@
 				<div class="form-group row">
             <label for="recipient-name" class="col-sm-4 col-form-label">Id:</label>
              <div class="col-sm-6">
-            <input type="text" class="form-control" id="recipient-name" name="id"  readonly>
+            <input type="text" class="form-control" id="recipient-name" name="train_id" >
              </div>
           </div> 
           
              <div class="form-group row">
             <label for="recipient-name"  class="col-sm-4 col-form-label">Start Date:</label>
             <div class="col-sm-6">
-            <input type="date" class="form-control" id="recipient-name" name="startdate"  required>
+            <input type="date" class="form-control" id="recipient-name" name="train_start_date"  >
             </div>
           </div> 
           
-          
+          <!--  
           <div class="form-group row" class="col-sm-4 col-form-label">
             <label for="recipient-name" class="col-sm-4 col-form-label">End Date:</label>
             <div class="col-sm-6">
             <input type="date" class="form-control" id="recipient-name" name="enddate"  required>
             </div>
           </div>
-          
+          -->
                    
           <div class="form-group row" class="col-sm-4 col-form-label">
             <label for="recipient-name" class="col-sm-4 col-form-label">  First Name:</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="recipient-name" name="firstname"  required>
+            <input type="text" class="form-control" id="recipient-name" name="first_name"  required>
             </div>
           </div>
         
@@ -105,19 +107,19 @@
         
 		<td width="50%" style="padding-left:10px">
           <div class="form-group row" class="col-sm-4 col-form-label">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Last Name:</label>
+            <label for="recipient-name" class="col-sm-4 col-form-label">Middle Name:</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="recipient-name" name="lastname"    required>
+            <input type="text" class="form-control" id="recipient-name" name="middle_name"    required>
             </div>
           </div>
         <div class="form-group row"  class="col-sm-4 col-form-label">
 		    <label for="trainee" class="col-sm-4 col-form-label">Course: </label>
 		    <div class="col-sm-6">
-			    <select class="form-control" id="ddlDocumentAdd" name="traineecourseid" required>
+			    <select class="form-control" id="ddlDocumentAdd" name="course_id" required>
 			       <option>-SELECT-</option>
 			     	   
 			       <c:forEach items="${courses}" var="course">
-				      <option value="${course.id}">${course.coursename}
+				      <option value="${course.course_id}">${course.course_name}
 				   </option>
 				   </c:forEach>
 			    </select>	
@@ -126,24 +128,25 @@
          <div class="form-group row"  class="col-sm-4 col-form-label">
 		    <label for="ddlCountryDetails" class="col-sm-4 col-form-label">Organization: </label>
 		    <div class="col-sm-6">
-			    <select class="form-control" id="ddlDocumentAdd" name="traineeorgid" required>
+			    <select class="form-control" id="ddlDocumentAdd" name="org_id" required>
 			       <option>-SELECT-</option>
 			     	   
 			       <c:forEach items="${organizations}" var="org">
-				      <option value="${org.id}">${org.orgname}
+				      <option value="${org.org_id}">${org.org_name}
 				   </option>
 				   </c:forEach>
 			    </select>	
 			  </div>  		    
-		  </div>   
-		  
+		  </div> 
+		    
+		  <!--  
 		  <div class="form-group row" class="col-sm-4 col-form-label">
             <label for="recipient-name" class="col-sm-4 col-form-label">Exam Score:</label>
             <div class="col-sm-6">
             <input type="text" class="form-control" id="recipient-name" name="examscore" required>
             </div>
           </div>  
-        
+        -->
           
         
       <div class="modal-footer">
@@ -181,30 +184,23 @@
 				<div class="form-group row">
             <label for="recipient-name" class="col-sm-4 col-form-label">Id:</label>
              <div class="col-sm-6">
-            <input type="text" class="form-control" id="idEdit" name="id"  readonly>
+            <input type="text" class="form-control" id="idEdit" name="id">
              </div>
           </div> 
           
              <div class="form-group row">
             <label for="recipient-name"  class="col-sm-4 col-form-label">Start Date:</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="idstartdate" name="startdate">
+            <input type="date" class="form-control" id="idstartdate" name="train_start_date">
             </div>
           </div> 
           
-          
-          <div class="form-group row" class="col-sm-4 col-form-label">
-            <label for="recipient-name" class="col-sm-4 col-form-label">End Date:</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="idenddate" name="enddate"  required>
-            </div>
-          </div>
-          
+       
                    
           <div class="form-group row" class="col-sm-4 col-form-label">
             <label for="recipient-name" class="col-sm-4 col-form-label">  First Name:</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="nameEdit" name="firstname">
+            <input type="text" class="form-control" id="nameEdit" name="first_name">
             </div>
           </div>
         
@@ -212,19 +208,19 @@
         
 		<td width="50%" style="padding-left:10px">
           <div class="form-group row" class="col-sm-4 col-form-label">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Last Name:</label>
+            <label for="recipient-name" class="col-sm-4 col-form-label">Middle Name:</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="lastnameEdit" name="lastname" >
+            <input type="text" class="form-control" id="lastnameEdit" name="middle_name" >
             </div>
           </div>
         <div class="form-group row"  class="col-sm-4 col-form-label">
 		    <label for="trainee" class="col-sm-4 col-form-label">Course: </label>
 		    <div class="col-sm-6">
-			    <select class="form-control" id="traineecourseEdit" name="traineecourseid" >
+			    <select class="form-control" id="traineecourseEdit" name="course_id" >
 			       <option>-SELECT-</option>
 			     	   
 			       <c:forEach items="${courses}" var="course">
-				      <option value="${course.id}">${course.coursename}
+				      <option value="${course.course_id}">${course.course_name}
 				   </option>
 				   </c:forEach>
 			    </select>	
@@ -233,28 +229,17 @@
          <div class="form-group row"  class="col-sm-4 col-form-label">
 		    <label for="ddlCountryDetails" class="col-sm-4 col-form-label">Organization: </label>
 		    <div class="col-sm-6">
-			    <select class="form-control" id="traineeorgEdit" name="traineeorgid" required>
+			    <select class="form-control" id="traineeorgEdit" name="org_id" >
 			       <option>-SELECT-</option>
 			     	   
 			       <c:forEach items="${organizations}" var="org">
-				      <option value="${org.id}">${org.orgname}
+				      <option value="${org.org_id}">${org.org_name}
 				   </option>
 				   </c:forEach>
 			    </select>	
 			  </div>  		    
 		  </div>   
-		  
-		  <div class="form-group row" class="col-sm-4 col-form-label">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Exam Score:</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="idexamscore" name="examscore">
-            </div>
-          </div>  
-        
-
-        
-         
-          
+ 
       
        <div class="modal-footer">
         <div class="form-group row" class="col-sm-4 col-form-label">

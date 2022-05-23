@@ -33,6 +33,7 @@
                      <th><i class="icon_table"></i>Username</th>
                      
                       <th><i class="icon_table"></i> Organization Code</th>
+                      <th><i class="icon_table"></i> Status</th>
                      
                      <th><i class="icon_cogs"></i>Actions</th>
                   </tr>
@@ -45,6 +46,7 @@
 						    <td>${user.lastName}</td>
 							<td>${user.username}</td>
 							<td>${user.org_id}</td>
+							<td>${user.status}</td>
 							
 			
 							  <td>
@@ -153,6 +155,22 @@
 		  </div> 
 		  
           
+           <div class="form-group row">
+		    <label for="trainee" class="col-sm-4 col-form-label">Directorate: </label>
+		    <div class ="col-sm-6">
+			    <select class="form-control" id="orgid" name="user_dir_name"  >
+			       <option>--SELECT--</option>
+			     	 <c:forEach items="${directorate}" var="director">
+				      <option value="${director.dir_name}">${director.dir_name}
+				   </option>
+				   </c:forEach>
+				   
+			    </select>
+			    <form:errors path="organization"></form:errors>	
+			    </div>		    
+		  </div> 
+		  
+          
           
           <!-- the following id="roles" and name ="roles" is very important to add user_id and role_id in to db -->
 
@@ -190,9 +208,19 @@
     
         -->
 
+          
 
-
-
+    <spring:bind path="confirmPassword">
+           <div class="form-group row ">
+            <label for="recipient-name" class="col-sm-4 col-form-label">Status:</label>
+            <div class ="col-sm-6">
+            <input type="number" class="form-control" id="statusEdit" name="status" >
+           <form:errors path="status"></form:errors>
+            
+            </div>
+          </div>
+          
+          </spring:bind>
 
 									<div class="modal-footer">
          <div class="form-group row" class="col-sm-4 col-form-label">
@@ -259,7 +287,7 @@
           <div class="form-group row ">
             <label for="recipient-name" class="col-sm-4 col-form-label">Username:</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="userNameEdit" name="username"  required>
+            <input type="text" class="form-control" id="userNameEdit" name="username"  >
              <form:errors path="username"></form:errors>
             </div>
           </div>
@@ -301,7 +329,21 @@
 			    </div>		    
 		  </div> 
 		  
-          
+           <div class="form-group row">
+		    <label for="trainee" class="col-sm-4 col-form-label">Directorate: </label>
+		    <div class ="col-sm-6">
+			    <select class="form-control" id="orgid" name="user_dir_name"  >
+			       <option>--SELECT--</option>
+			     	 <c:forEach items="${directorate}" var="director">
+				      <option value="${director.dir_name}">${director.dir_name}
+				   </option>
+				   </c:forEach>
+				   
+			    </select>
+			    <form:errors path="organization"></form:errors>	
+			    </div>		    
+		  </div> 
+		  
           
           <!-- the following id="roles" and name ="roles" is very important to add user_id and role_id in to db -->
 
@@ -318,7 +360,21 @@
                   <form:errors path="roles"></form:errors>
 				</div>
 			</div>
-	 						
+	 		
+	  	
+          
+          
+           <spring:bind path="confirmPassword">
+           <div class="form-group row ">
+            <label for="recipient-name" class="col-sm-4 col-form-label">Status:</label>
+            <div class ="col-sm-6">
+            <input type="number" class="form-control" id="statusEdit" name="status" >
+           <form:errors path="status"></form:errors>
+            
+            </div>
+          </div>
+          
+          </spring:bind>					
 
 
 									<div class="modal-footer">

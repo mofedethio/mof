@@ -30,16 +30,16 @@
                 <tbody>
                   <c:forEach items="${organizations}" var="org">
 						<tr>
-						     <td>${org.id}</td>
-							<td>${org.orgname}</td>
-							<td>${org.organizationhead}</td>
+						     <td>${org.org_id}</td>
+							<td>${org.org_name}</td>
 							<td>${org.email}</td>
 							<td>${org.telephone}</td>
+							<td>${org.status}</td>
 							
 							<td><a type="button" class="btn btn-success" id="editButton"
-								href="/organizations/findById?id=${org.id}">Update</a>
+								href="/organizations/findById?id=${org.org_id}">Update</a>
 							<a type="button" class="btn btn-warning" id="deleteButton"
-								href="/organizations/delete?id=${org.id}">Delete</a></td>
+								href="/organizations/delete?id=${org.org_id}">Delete</a></td>
 							
 								  
 						</tr>
@@ -63,18 +63,14 @@
         
         <div class="form-group">
             <label for="recipient-name" class="col-form-label">OrganizationID:</label>
-            <input type="text" class="form-control" id="recipient-name" name="id"  required>
+            <input type="text" class="form-control" id="recipient-name" name="org_id"  required>
           </div>
                        
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Organization:</label>
-            <input type="text" class="form-control" id="recipient-name" name="orgname"  required>
+            <input type="text" class="form-control" id="recipient-name" name="org_name"  required>
           </div>
           
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Organization Head:</label>
-            <input type="text" class="form-control" id="recipient-name" name="organizationhead"  required>
-          </div>
         
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Email:</label>
@@ -85,7 +81,10 @@
             <label for="recipient-name" class="col-form-label">Telephone:</label>
             <input type="text" class="form-control" id="recipient-name" name="telephone">
           </div>
-        
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Organization Head:</label>
+            <input type="text" class="form-control" id="recipient-name" name="status"  required>
+          </div>
                   
         
           <div class="form-group">

@@ -30,14 +30,14 @@
                 <tbody>
                   <c:forEach items="${directorates}" var="dir">
 						<tr>
-							<td>${dir.directoratename}</td>
+							<td>${dir.dir_name}</td>
 							<td>${dir.email}</td>
-							<td>${dir.telephone}</td>
+							<td>${dir.phone_num}</td>
 							
 							<td><a type="button" class="btn btn-success" id="editButton"
-								href="/directorates/findById?id=${dir.directoratename}">Update</a>
+								href="/directorates/findById?id=${dir.dir_name}">Update</a>
 							<a type="button" class="btn btn-warning" id="deleteButton"
-								href="/directorates/delete?id=${dir.directoratename}">Delete</a></td>
+								href="/directorates/delete?id=${dir.dir_name}">Delete</a></td>
 							
 								  
 						</tr>
@@ -61,7 +61,7 @@
                        
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Directorate:</label>
-            <input type="text" class="form-control" id="recipient-name" name="directoratename"  required>
+            <input type="text" class="form-control" id="recipient-name" name="dir_name"  required>
           </div>
         
           <div class="form-group">
@@ -71,7 +71,7 @@
         
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Telephone:</label>
-            <input type="text" class="form-control" id="recipient-name" name="telephone">
+            <input type="text" class="form-control" id="recipient-name" name="phone_num">
           </div>
         
                   
@@ -102,7 +102,7 @@
             
           <div class="form-group">
             <label for="recipient-id" class="col-form-label">Directorate:</label>
-            <input type="text" class="form-control" id="idEdit" name="directoratename" readonly>
+            <input type="text" class="form-control" id="idEdit" name="dir_name" readonly>
           </div>
         
                     
@@ -114,7 +114,7 @@
         
           <div class="form-group">
             <label for="recipient-telephone" class="col-form-label">telephone:</label>
-            <input type="text" class="form-control" id="telephoneEdit" name="telephone">
+            <input type="text" class="form-control" id="telephoneEdit" name="phone_num">
           </div>
                    
                       

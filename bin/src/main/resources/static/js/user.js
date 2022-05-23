@@ -10,7 +10,7 @@ $('document').ready(function(){
 			$('#firstNameEdit').val(user.firstName);
 			$('#lastNameEdit').val(user.lastName);
 			$('#userNameEdit').val(user.username);
-			$('#emailEdit').val(user.email);
+		
 			$('#passEdit').val(user.password);
 			$('#confirmPassEdit').val(user.confirmPassword);
 			$('#orgIdEdit').val(user.org_id);

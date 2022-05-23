@@ -31,7 +31,7 @@
                     <th><i class="icon_table"></i>First Name:</th>
                     <th><i class="icon_table"></i>Last Name:</th>
                      <th><i class="icon_table"></i>Username</th>
-                     <th><i class="icon_table"></i> Email</th>
+                   
                       <th><i class="icon_table"></i> Organization Code</th>
                      
                      <th><i class="icon_cogs"></i>Actions</th>
@@ -44,7 +44,6 @@
 						    <td>${user.firstName}</td>
 						    <td>${user.lastName}</td>
 							<td>${user.username}</td>
-							<td>${user.email}</td>
 							<td>${user.org_id}</td>
 							
 			
@@ -104,15 +103,7 @@
           </div>
           </spring:bind>
           
-          <spring:bind path="email">
-           <div class="form-group row ">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Email:</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="emailedit" name="email"  >
-          
-            </div>
-          </div>
-             </spring:bind>      
+              
              
              <spring:bind path="username">      
           <div class="form-group row ">
@@ -266,13 +257,7 @@
           
           
           
-           <div class="form-group row ">
-            <label for="recipient-name" class="col-sm-4 col-form-label">Email:</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="emailEdit" name="email"  >
-          
-            </div>
-          </div>
+           
                  
           <div class="form-group row ">
             <label for="recipient-name" class="col-sm-4 col-form-label">Username:</label>

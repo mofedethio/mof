@@ -9,8 +9,6 @@ $('document').ready(function(){
 			
 			$('#orgEdit').val(org.orgname);
 			$('#orgheadEdit').val(org.organizationhead);
-			
-			$('#emailEdit').val(org.email);
 			$('#telephoneEdit').val(org.telephone);
 			});					
 		$('#editModal').modal();

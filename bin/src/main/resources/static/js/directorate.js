@@ -8,7 +8,6 @@ $('document').ready(function(){
 			$('#idEdit').val(dir.id);
 			
 			$('#idEdit').val(dir.directoratename);
-			$('#emailEdit').val(dir.email);
 			$('#telephoneEdit').val(dir.telephone);
 			});					
 		$('#editModal').modal();
